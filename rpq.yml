@@ -1,0 +1,14 @@
+---
+declared-services:
+  wvda-visual-recognition:
+    label: rpq-iot
+    plan: rpq
+applications:
+- path: ./server
+  memory: 256M
+  instances: 1
+  name: rpq-iot
+  disk_quota: 1024M
+  random-route: false
+  services:
+  - rpq-iot-service
